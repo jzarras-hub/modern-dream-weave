@@ -28,7 +28,7 @@ const HeroSection = () => (
       >
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-sm text-muted-foreground mb-6">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          35+ Χρόνια Εμπειρίας
+          Από το 1991
         </span>
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
