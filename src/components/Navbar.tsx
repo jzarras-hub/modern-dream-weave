@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-20">
         <a href="#hero" onClick={() => scrollTo("#hero")}>
-          <img src={logo} alt="Zarras Tech" className="h-14" />
+          <img src={logo} alt="Zarras Tech" className="h-[72px]" />
         </a>
 
         {/* Desktop */}
