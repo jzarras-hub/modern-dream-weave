@@ -21,9 +21,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-20">
-        <a href="#hero" onClick={() => scrollTo("#hero")} className="flex items-center gap-2">
+        <a href="#hero" onClick={() => scrollTo("#hero")}>
           <img src={logo} alt="Zarras Tech" className="h-14" />
-          <span className="text-xs text-muted-foreground font-medium tracking-wide">Από το 1991</span>
         </a>
 
         {/* Desktop */}
