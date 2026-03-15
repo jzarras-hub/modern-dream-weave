@@ -37,7 +37,7 @@ const HeroSection = () => (
         </h1>
 
         <p className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-          35+ χρόνια εμπειρίας στα Ιωάννινα. Εξειδικευόμαστε σε επισκευές Laptop,
+          35+ χρόνια εμπειρίας στα Ιωάννινα. Εξειδικευόμαστε σε επισκευές & πωλήσεις Laptop,
           PC, Mac, PlayStation &amp; Smartphone, με εγγύηση επισκευής.
         </p>
 
