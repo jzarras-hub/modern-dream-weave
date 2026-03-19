@@ -87,7 +87,7 @@ const ContactSection = () => (
             style={{ border: 0 }}
           />
           <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-full pointer-events-none z-10">
-            <span className="text-gradient text-xs font-bold px-2.5 py-1 rounded-md shadow-lg whitespace-nowrap bg-foreground">
+            <span className="text-xs font-bold px-2.5 py-1 rounded-md shadow-lg whitespace-nowrap bg-foreground bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(135deg, hsl(220 80% 30%), hsl(30 100% 55%))' }}>
               ZarrasTech
             </span>
           </div>
