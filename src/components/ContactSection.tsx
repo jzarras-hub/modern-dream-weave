@@ -1,5 +1,26 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink, Star } from "lucide-react";
+
+const reviews = [
+  {
+    name: "Γιώργος Κ.",
+    rating: 5,
+    text: "Εξαιρετική εξυπηρέτηση! Μου επισκεύασαν το laptop σε μία μέρα. Πολύ επαγγελματική δουλειά και φιλικό προσωπικό. Τους συστήνω ανεπιφύλακτα!",
+    date: "2 μήνες πριν",
+  },
+  {
+    name: "Μαρία Π.",
+    rating: 5,
+    text: "Αναβάθμισαν τον υπολογιστή μου με SSD και τώρα τρέχει σαν καινούργιος. Πολύ καλές τιμές σε σχέση με τον ανταγωνισμό. Ευχαριστώ!",
+    date: "1 μήνα πριν",
+  },
+  {
+    name: "Δημήτρης Α.",
+    rating: 5,
+    text: "Αγόρασα refurbished laptop και είμαι πολύ ευχαριστημένος. Σαν καινούργιο! Ο κ. Ζάρρας είναι πολύ εξυπηρετικός και γνώστης.",
+    date: "3 εβδομάδες πριν",
+  },
+];
 
 const ContactSection = () => (
   <section id="contact" className="py-24 bg-secondary/50">
