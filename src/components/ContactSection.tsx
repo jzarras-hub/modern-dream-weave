@@ -86,6 +86,11 @@ const ContactSection = () => (
             className="w-full h-full absolute inset-0"
             style={{ border: 0 }}
           />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(100%+12px)] pointer-events-none z-10">
+            <span className="bg-foreground text-background text-xs font-bold px-2.5 py-1 rounded-md shadow-lg whitespace-nowrap">
+              ZarrasTech
+            </span>
+          </div>
           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
             <span className="text-sm bg-background/90 backdrop-blur px-3 py-1.5 rounded-lg text-foreground">
               Βρείτε μας στα Ιωάννινα
