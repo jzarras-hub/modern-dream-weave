@@ -38,8 +38,8 @@ const services = [
   },
   {
     icon: ShoppingBag,
-    title: "Πωλήσεις καινούργιων & Refurbished",
-    desc: "Επιλεγμένα καινούργια και ελεγμένα refurbished συστήματα, κινητά τηλέφωνα και περιφερειακά.",
+    title: "Πωλήσεις καινούργιων & Refurbished Υπολογιστών, Laptop",
+    desc: "Επιλεγμένα καινούργια και ελεγμένα 100% refurbished συστήματα.",
   },
   {
     icon: Laptop,
