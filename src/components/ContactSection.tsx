@@ -87,7 +87,7 @@ const ContactSection = () => (
             style={{ border: 0 }}
           />
           <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-full pointer-events-none z-10">
-            <span className="bg-foreground text-background text-xs font-bold px-2.5 py-1 rounded-md shadow-lg whitespace-nowrap">
+            <span className="text-gradient text-xs font-bold px-2.5 py-1 rounded-md shadow-lg whitespace-nowrap bg-foreground">
               ZarrasTech
             </span>
           </div>
