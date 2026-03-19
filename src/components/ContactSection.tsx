@@ -125,12 +125,12 @@ const InfoCard = ({
   lines: React.ReactNode[];
 }) => (
   <div className="p-6 rounded-xl bg-card border border-border shadow-card">
-    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-      <Icon className="w-5 h-5 text-primary" />
+    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+      <Icon className="w-6 h-6 text-primary" />
     </div>
-    <h3 className="font-semibold mb-2">{title}</h3>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
     {lines.map((line, i) => (
-      <p key={i} className="text-sm text-muted-foreground">
+      <p key={i} className="text-base text-muted-foreground">
         {line}
       </p>
     ))}
