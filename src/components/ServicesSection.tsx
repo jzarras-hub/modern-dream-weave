@@ -14,7 +14,7 @@ const services = [
   {
     icon: Monitor,
     title: "Επισκευές Laptop & PC",
-    desc: "Διάγνωση και επιδιόρθωση βλαβών σε επίπεδο hardware και software. Αντικατάσταση οθόνης, μπαταρίας, πληκτρολογίου Laptop.",
+    desc: "Διάγνωση και επιδιόρθωση βλαβών σε επίπεδο hardware και software. Αντικατάσταση οθόνης, μπαταρίας, πληκτρολογίου σε Laptop.",
   },
   {
     icon: Zap,
