@@ -66,8 +66,8 @@
   }
 
   h1, h2, h3 {
-    color: hsl(30 100% 45%);
-    -webkit-text-fill-color: hsl(30 100% 45%);
+    color: hsl(30 100% 32%);
+    -webkit-text-fill-color: hsl(30 100% 32%);
   }
 }
 
