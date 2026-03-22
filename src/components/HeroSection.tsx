@@ -1,5 +1,6 @@
 import { ArrowRight, Wrench, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import CircuitGrid from "./CircuitGrid";
 import heroBg from "@/assets/hero-bg.png";
 
 const badges = [
@@ -15,8 +16,9 @@ const HeroSection = () => (
   >
     {/* Background */}
     <div className="absolute inset-0">
-      <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+      <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
+      <CircuitGrid />
     </div>
 
     <div className="container relative z-10">
@@ -26,7 +28,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8 }}
         className="max-w-2xl"
       >
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-sm text-muted-foreground mb-6">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-sm text-muted-foreground mb-6">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           Από το 1991
         </span>
@@ -44,13 +46,13 @@ const HeroSection = () => (
         <div className="flex flex-wrap gap-4 mb-16">
           <a
             href="#services"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-blue text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
           >
             Οι Υπηρεσίες μας <ArrowRight className="w-4 h-4" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center px-7 py-3.5 rounded-lg border border-border text-foreground hover:bg-secondary transition-colors font-medium"
+            className="inline-flex items-center px-7 py-3.5 rounded-lg glass text-foreground hover:bg-secondary transition-colors font-medium"
           >
             Επικοινωνία
           </a>
