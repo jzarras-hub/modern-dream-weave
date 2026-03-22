@@ -1,0 +1,96 @@
+import { motion } from "framer-motion";
+import { Zap, HardDrive, Cpu, MemoryStick } from "lucide-react";
+
+const upgrades = [
+  { icon: HardDrive, label: "SSD NVMe", desc: "Αντικατάσταση σκληρού δίσκου με SSD για άμεση εκκίνηση" },
+  { icon: MemoryStick, label: "RAM Upgrade", desc: "Αύξηση μνήμης για ομαλή πολυδιεργασία" },
+  { icon: Cpu, label: "Βελτιστοποίηση", desc: "Καθαρισμός λογισμικού και βελτιστοποίηση συστήματος" },
+];
+
+const SpeedSection = () => (
+  <section className="py-24 relative overflow-hidden">
+    <div className="container">
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Animated visual */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative flex items-center justify-center"
+        >
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            {/* Outer ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20"
+            />
+            {/* Middle ring */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-6 rounded-full border-2 border-primary/30"
+            >
+              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-blue" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-accent" />
+            </motion.div>
+            {/* Inner ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-12 rounded-full border-2 border-accent/30"
+            >
+              <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 rounded-full bg-accent shadow-lg" />
+            </motion.div>
+            {/* Center */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="glass rounded-full w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center">
+                <Zap className="w-8 h-8 text-primary mb-1" />
+                <span className="text-3xl font-bold text-gradient">×10</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Αναβάθμιση Ταχύτητας{" "}
+            <span className="text-gradient">×10</span>
+          </h2>
+          <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+            Ο υπολογιστής σας τρέχει αργά; Με τις εξειδικευμένες αναβαθμίσεις μας,
+            μπορούμε να αυξήσουμε την ταχύτητά του έως και 10 φορές. Η διαφορά
+            είναι αισθητή από το πρώτο δευτερόλεπτο.
+          </p>
+          <div className="space-y-4">
+            {upgrades.map((u, i) => (
+              <motion.div
+                key={u.label}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass rounded-xl p-4 flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <u.icon className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">{u.label}</h4>
+                  <p className="text-sm text-muted-foreground">{u.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
+
+export default SpeedSection;

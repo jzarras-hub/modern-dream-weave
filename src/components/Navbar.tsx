@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-border">
       <div className="container flex items-center justify-between h-20">
         <a href="#hero" onClick={() => scrollTo("#hero")}>
           <img src={logo} alt="Zarras Tech" className="h-[72px]" />
@@ -38,7 +38,7 @@ const Navbar = () => {
           ))}
           <a
             href="tel:+306974484324"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all text-sm font-medium"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4" />
             +30 6974484324
@@ -53,7 +53,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border px-6 pb-6 space-y-4">
+        <div className="md:hidden glass-strong border-t border-border px-6 pb-6 space-y-4">
           {navLinks.map((l) => (
             <button
               key={l.href}
