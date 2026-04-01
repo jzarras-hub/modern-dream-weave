@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, HardDrive, Cpu, MemoryStick } from "lucide-react";
+import { HardDrive, Cpu, MemoryStick } from "lucide-react";
 
 const upgrades = [
   { icon: HardDrive, label: "SSD NVMe", desc: "Αντικατάσταση σκληρού δίσκου με SSD για άμεση εκκίνηση" },
@@ -11,43 +11,46 @@ const SpeedSection = () => (
   <section className="py-24 relative overflow-hidden">
     <div className="container">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
-        {/* Animated visual */}
+        {/* Animated visual matching reference */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="relative flex items-center justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
             {/* Outer ring */}
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20"
-            />
-            {/* Middle ring */}
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-6 rounded-full border-2 border-primary/30"
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full"
+              style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
             >
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-blue" />
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-accent" />
+              {/* Cyan dot on outer ring */}
+              <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_4px_rgba(0,200,255,0.5)]" />
+              {/* Small purple dot */}
+              <div className="absolute bottom-8 left-4 w-2 h-2 rounded-full bg-purple-400/60" />
             </motion.div>
+
             {/* Inner ring */}
             <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-12 rounded-full border-2 border-accent/30"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-10 md:inset-14 rounded-full"
+              style={{ border: "1px solid hsla(25, 80%, 50%, 0.25)" }}
             >
-              <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 rounded-full bg-accent shadow-lg" />
+              {/* Orange dot on inner ring */}
+              <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" />
             </motion.div>
-            {/* Center */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="glass rounded-full w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center">
-                <Zap className="w-8 h-8 text-primary mb-1" />
-                <span className="text-3xl font-bold text-gradient">×10</span>
-              </div>
+
+            {/* Center dark circle with glow */}
+            <div className="absolute inset-16 md:inset-20 rounded-full bg-gradient-to-b from-[hsl(220,20%,14%)] to-[hsl(220,25%,8%)] shadow-[0_0_80px_20px_rgba(255,160,0,0.08)] flex flex-col items-center justify-center">
+              <span className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-orange-600 leading-none" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                x10
+              </span>
+              <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-orange-400/80 mt-2 uppercase">
+                Ταχύτερα
+              </span>
             </div>
           </div>
         </motion.div>
