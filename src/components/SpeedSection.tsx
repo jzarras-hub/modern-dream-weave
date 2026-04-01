@@ -44,7 +44,14 @@ const SpeedSection = () => (
             </motion.div>
 
             {/* Center dark circle with glow */}
-            <div className="absolute inset-16 md:inset-20 rounded-full bg-gradient-to-b from-[hsl(220,20%,14%)] to-[hsl(220,25%,8%)] shadow-[0_0_80px_20px_rgba(255,160,0,0.08)] flex flex-col items-center justify-center">
+            <motion.div
+              animate={{ boxShadow: [
+                "0 0 60px 15px rgba(255,160,0,0.06)",
+                "0 0 100px 30px rgba(255,160,0,0.15)",
+                "0 0 60px 15px rgba(255,160,0,0.06)",
+              ]}}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-16 md:inset-20 rounded-full bg-gradient-to-b from-[hsl(220,20%,14%)] to-[hsl(220,25%,8%)] flex flex-col items-center justify-center">
               <span className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-orange-600 leading-none" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 x10
               </span>
