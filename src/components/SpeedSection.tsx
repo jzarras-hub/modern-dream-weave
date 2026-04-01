@@ -58,7 +58,7 @@ const SpeedSection = () => (
               <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-orange-400/80 mt-2 uppercase">
                 Ταχύτερα
               </span>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
 
