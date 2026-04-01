@@ -52,10 +52,10 @@ const SpeedSection = () => (
               ]}}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-16 md:inset-20 rounded-full bg-gradient-to-b from-[hsl(220,20%,14%)] to-[hsl(220,25%,8%)] flex flex-col items-center justify-center">
-              <span className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-orange-600 leading-none" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-amber-300 to-orange-400 leading-none" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 x10
               </span>
-              <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-orange-400/80 mt-2 uppercase">
+              <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-300/90 mt-2 uppercase">
                 Ταχύτερα
               </span>
             </motion.div>
