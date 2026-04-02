@@ -9,6 +9,7 @@ import AboutSection from "@/components/AboutSection";
 import TonerSection from "@/components/TonerSection";
 import RentalSection from "@/components/RentalSection";
 import BrandsTicker from "@/components/BrandsTicker";
+import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -26,6 +27,7 @@ const Index = () => (
     <TonerSection />
     <RentalSection />
     <BrandsTicker />
+    <FAQSection />
     <ContactSection />
     <Footer />
     <FloatingCTA />
