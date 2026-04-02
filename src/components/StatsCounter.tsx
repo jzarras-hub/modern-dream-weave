@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Calendar, Zap, Wrench, Heart } from "lucide-react";
 
 const stats = [
-  { value: 35, suffix: "+", label: "Χρόνια Εμπειρίας" },
-  { value: 10, suffix: "×", label: "Ταχύτερος Υπολογιστής" },
-  { value: 5000, suffix: "+", label: "Επισκευές" },
-  { value: 98, suffix: "%", label: "Ικανοποίηση Πελατών" },
+  { value: 35, suffix: "+", label: "Χρόνια Εμπειρίας", icon: Calendar },
+  { value: 10, suffix: "×", label: "Ταχύτερος Υπολογιστής", icon: Zap },
+  { value: 5000, suffix: "+", label: "Επισκευές", icon: Wrench },
+  { value: 98, suffix: "%", label: "Ικανοποίηση Πελατών", icon: Heart },
 ];
 
 const useCounter = (target: number, inView: boolean) => {
@@ -30,7 +31,7 @@ const useCounter = (target: number, inView: boolean) => {
   return count;
 };
 
-const StatItem = ({ value, suffix, label }: { value: number; suffix: string; label: string }) => {
+const StatItem = ({ value, suffix, label, icon: Icon }: { value: number; suffix: string; label: string; icon: React.ElementType }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   const count = useCounter(value, inView);
@@ -45,6 +46,9 @@ const StatItem = ({ value, suffix, label }: { value: number; suffix: string; lab
 
   return (
     <div ref={ref} className="text-center">
+      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+        <Icon className="w-6 h-6 text-primary" />
+      </div>
       <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
         {count}{suffix}
       </div>

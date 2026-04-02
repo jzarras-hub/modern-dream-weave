@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/zarras-logo.png";
 
 const navLinks = [
@@ -11,6 +12,13 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const scrollTo = (href: string) => {
     setOpen(false);
@@ -19,7 +27,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "glass-strong border-b border-border shadow-card"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container flex items-center justify-between h-20">
         <a href="#hero" onClick={() => scrollTo("#hero")}>
           <img src={logo} alt="Zarras Tech" className="h-[72px]" />
@@ -31,9 +45,10 @@ const Navbar = () => {
             <button
               key={l.href}
               onClick={() => scrollTo(l.href)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
             >
               {l.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </button>
           ))}
           <a
@@ -52,26 +67,41 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden glass-strong border-t border-border px-6 pb-6 space-y-4">
-          {navLinks.map((l) => (
-            <button
-              key={l.href}
-              onClick={() => scrollTo(l.href)}
-              className="block w-full text-left text-muted-foreground hover:text-foreground transition-colors py-2"
-            >
-              {l.label}
-            </button>
-          ))}
-          <a
-            href="tel:+306974484324"
-            className="flex items-center gap-2 text-primary font-medium"
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden glass-strong border-t border-border overflow-hidden"
           >
-            <Phone className="w-4 h-4" />
-            +30 6974484324
-          </a>
-        </div>
-      )}
+            <div className="px-6 py-6 space-y-1">
+              {navLinks.map((l, i) => (
+                <motion.button
+                  key={l.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={() => scrollTo(l.href)}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 text-lg font-medium"
+                >
+                  {l.label}
+                </motion.button>
+              ))}
+              <motion.a
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                href="tel:+306974484324"
+                className="flex items-center gap-2 mt-4 px-5 py-3 rounded-xl bg-gradient-primary text-primary-foreground font-medium w-full justify-center"
+              >
+                <Phone className="w-4 h-4" />
+                +30 6974484324
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
