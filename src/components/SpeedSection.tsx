@@ -27,9 +27,9 @@ const SpeedSection = () => (
               style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
             >
               {/* Cyan dot on outer ring */}
-              <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_12px_4px_rgba(0,200,255,0.5)]" />
+              <div className="absolute top-1/2 -right-3 -translate-y-1/2 w-6 h-6 rounded-full bg-cyan-400 shadow-[0_0_18px_6px_rgba(0,200,255,0.5)]" />
               {/* Small purple dot */}
-              <div className="absolute bottom-8 left-4 w-2 h-2 rounded-full bg-purple-400/60" />
+              <div className="absolute bottom-8 left-4 w-4 h-4 rounded-full bg-purple-400/60" />
             </motion.div>
 
             {/* Inner ring */}
