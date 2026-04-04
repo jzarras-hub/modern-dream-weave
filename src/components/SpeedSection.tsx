@@ -40,7 +40,7 @@ const SpeedSection = () => (
               style={{ border: "1px solid hsla(25, 80%, 50%, 0.25)" }}
             >
               {/* Orange dot on inner ring */}
-              <div className="absolute top-1/2 -left-3 -translate-y-1/2 w-6 h-6 rounded-full bg-orange-500 shadow-[0_0_18px_6px_rgba(255,140,0,0.5)]" />
+              <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" />
             </motion.div>
 
             {/* Center dark circle with glow */}
