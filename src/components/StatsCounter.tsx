@@ -6,7 +6,7 @@ const stats = [
   { value: 35, suffix: "+", label: "Χρόνια Εμπειρίας", icon: Calendar },
   { value: 10, suffix: "×", label: "Ταχύτερος Υπολογιστής", icon: Zap },
   { value: 5000, suffix: "+", label: "Επισκευές", icon: Wrench },
-  { value: 98, suffix: "%", label: "Ικανοποίηση Πελατών", icon: Heart },
+  { value: 100, suffix: "%", label: "Ικανοποίηση Πελατών", icon: Heart },
 ];
 
 const useCounter = (target: number, inView: boolean) => {
