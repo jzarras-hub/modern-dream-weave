@@ -52,7 +52,7 @@ const StatItem = ({ value, suffix, label, icon: Icon }: { value: number; suffix:
       <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
         {count}{suffix}
       </div>
-      <div className="text-sm text-muted-foreground">{label}</div>
+      <div className="text-sm" style={{ color: 'hsl(25, 95%, 53%)' }}>{label}</div>
     </div>
   );
 };
