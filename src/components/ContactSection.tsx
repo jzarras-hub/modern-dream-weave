@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, ExternalLink, Star } from "lucide-react";
-import ContactForm from "./ContactForm";
+
 
 const reviews = [
   {
@@ -40,9 +40,7 @@ const ContactSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-12">
-        {/* Left: Lead Form */}
-        <ContactForm />
+      <div className="max-w-2xl mx-auto">
 
         {/* Right: Info + Map */}
         <div className="space-y-6">
