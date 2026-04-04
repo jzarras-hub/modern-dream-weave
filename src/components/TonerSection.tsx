@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Printer, BadgePercent, CheckCircle } from "lucide-react";
+import { BadgePercent, CheckCircle } from "lucide-react";
+import tonerImg from "@/assets/toner.png";
 
 const benefits = [
   "Συμβατά με τους περισσότερους εκτυπωτές",
