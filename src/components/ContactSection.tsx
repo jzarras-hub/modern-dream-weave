@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, ExternalLink, Star } from "lucide-react";
 
-
 const reviews = [
   {
     name: "Γιώργος Κ.",
