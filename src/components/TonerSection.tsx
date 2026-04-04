@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { BadgePercent, CheckCircle } from "lucide-react";
-import tonerImg from "@/assets/toner.png";
+import { Printer, BadgePercent, CheckCircle } from "lucide-react";
 
 const benefits = [
   "Συμβατά με τους περισσότερους εκτυπωτές",
@@ -51,8 +50,8 @@ const TonerSection = () => (
             className="flex items-center justify-center p-10 bg-accent/5"
           >
             <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-accent/10 flex items-center justify-center overflow-hidden">
-                <img src={tonerImg} alt="Toner εκτυπωτή" loading="lazy" width={768} height={768} className="w-40 h-40 md:w-48 md:h-48 object-contain" />
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-accent/10 flex items-center justify-center">
+                <Printer className="w-24 h-24 text-accent/60" />
               </div>
               <motion.div
                 initial={{ scale: 0 }}
