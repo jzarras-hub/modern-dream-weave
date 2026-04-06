@@ -22,7 +22,7 @@ const SpeedSection = () => (
             {/* Outer ring */}
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               className="absolute inset-0 rounded-full"
               style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
             >
@@ -35,7 +35,7 @@ const SpeedSection = () => (
             {/* Inner ring */}
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 2.67, repeat: Infinity, ease: "linear" }}
               className="absolute inset-10 md:inset-14 rounded-full"
               style={{ border: "1px solid hsla(25, 80%, 50%, 0.25)" }}
             >
