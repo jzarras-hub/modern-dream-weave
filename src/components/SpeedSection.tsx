@@ -19,28 +19,24 @@ const SpeedSection = () => (
           className="relative flex items-center justify-center"
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96">
-            {/* Outer ring */}
+            {/* Single orbit ring */}
+            <div
+              className="absolute inset-0 rounded-full"
+              style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
+            />
+
+            {/* All dots rotating on one circle */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full"
-              style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
+              className="absolute inset-0"
             >
-              {/* Cyan dot on outer ring */}
+              {/* Cyan dot - 0° (right) */}
               <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_14px_4px_rgba(0,200,255,0.5)]" />
-              {/* Small purple dot */}
-              <div className="absolute bottom-8 left-4 w-3 h-3 rounded-full bg-purple-400/60" />
-            </motion.div>
-
-            {/* Inner ring */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2.67, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-10 md:inset-14 rounded-full"
-              style={{ border: "1px solid hsla(25, 80%, 50%, 0.25)" }}
-            >
-              {/* Orange dot on inner ring */}
-              <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" />
+              {/* Orange dot - 120° */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" style={{ transform: "rotate(0deg)", bottom: "-8px", left: "20%", position: "absolute" }} />
+              {/* Purple dot - 240° */}
+              <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-3 h-3 rounded-full bg-purple-400/60" />
             </motion.div>
 
             {/* Center dark circle with glow */}
