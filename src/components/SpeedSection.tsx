@@ -25,18 +25,31 @@ const SpeedSection = () => (
               style={{ border: "1px solid hsla(220, 30%, 40%, 0.3)" }}
             />
 
-            {/* All dots rotating on one circle */}
+            {/* Cyan dot - medium speed */}
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               className="absolute inset-0"
             >
-              {/* Cyan dot - 0° (right) */}
               <div className="absolute w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_14px_4px_rgba(0,200,255,0.5)]" style={{ top: "50%", left: "100%", transform: "translate(-50%, -50%)" }} />
-              {/* Orange dot - 120° (bottom-left) */}
-              <div className="absolute w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" style={{ top: "93.3%", left: "25%", transform: "translate(-50%, -50%)" }} />
-              {/* Purple dot - 240° (top-left) */}
-              <div className="absolute w-3 h-3 rounded-full bg-purple-400/60" style={{ top: "6.7%", left: "25%", transform: "translate(-50%, -50%)" }} />
+            </motion.div>
+
+            {/* Orange dot - fastest */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0"
+            >
+              <div className="absolute w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" style={{ top: "50%", left: "100%", transform: "translate(-50%, -50%)" }} />
+            </motion.div>
+
+            {/* Purple dot - slowest */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0"
+            >
+              <div className="absolute w-3 h-3 rounded-full bg-purple-400/60" style={{ top: "50%", left: "100%", transform: "translate(-50%, -50%)" }} />
             </motion.div>
 
             {/* Center dark circle with glow */}
