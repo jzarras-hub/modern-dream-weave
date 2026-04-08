@@ -32,11 +32,11 @@ const SpeedSection = () => (
               className="absolute inset-0"
             >
               {/* Cyan dot - 0° (right) */}
-              <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_14px_4px_rgba(0,200,255,0.5)]" />
-              {/* Orange dot - 120° */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" style={{ transform: "rotate(0deg)", bottom: "-8px", left: "20%", position: "absolute" }} />
-              {/* Purple dot - 240° */}
-              <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-3 h-3 rounded-full bg-purple-400/60" />
+              <div className="absolute w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_14px_4px_rgba(0,200,255,0.5)]" style={{ top: "50%", left: "100%", transform: "translate(-50%, -50%)" }} />
+              {/* Orange dot - 120° (bottom-left) */}
+              <div className="absolute w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_14px_4px_rgba(255,140,0,0.5)]" style={{ top: "93.3%", left: "25%", transform: "translate(-50%, -50%)" }} />
+              {/* Purple dot - 240° (top-left) */}
+              <div className="absolute w-3 h-3 rounded-full bg-purple-400/60" style={{ top: "6.7%", left: "25%", transform: "translate(-50%, -50%)" }} />
             </motion.div>
 
             {/* Center dark circle with glow */}
