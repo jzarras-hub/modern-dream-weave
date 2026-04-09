@@ -22,8 +22,10 @@ const Navbar = () => {
 
   const scrollTo = (href: string) => {
     setOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   return (
