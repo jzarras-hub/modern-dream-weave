@@ -16,8 +16,8 @@ const HeroSection = () => (
   >
     {/* Background */}
     <div className="absolute inset-0">
-      <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
+      <img src={heroBg} alt="" className="w-full h-full object-cover opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
       <CircuitGrid />
     </div>
 
